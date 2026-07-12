@@ -566,14 +566,14 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/PashtunObserver/flag-icons@main/64x64/af.png" width="48" style="border-radius: 50%;" />
+<img src="https://avatars.githubusercontent.com/u/75541935?s=400&u=080d98b4beead80772b298dafab711e29d7d0aeb&v=4" width="48" style="border-radius: 50%;" />
 
 ### **Rashid Ahmad SST IT**
 
 🎓 **Gold Medalist** · **BS Computer Science** · **University of Swat**
 
 <p>
-  <a href="https://www.pashtomedium.com/" target="_blank">
+  <a href="https://www.pashtomedium.com/p/rashid-ahmad.html" target="_blank">
     <img src="https://img.shields.io/badge/🔗%20Website-pashtomedium.com-6366f1?style=for-the-badge&logo=google-chrome&logoColor=white" />
   </a>
 </p>
