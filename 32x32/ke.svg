@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-120 -80 240 160">
 <defs>
 <path id="spearshape" d="M -1,55.4256258422040733928782829281879157421699 h 2 V -38 C 3,-40 3,-43 3,-46 C 3,-48 3,-56 0,-64.6632301492380856250246634162192350325315 C -3,-56 -3,-48 -3,-46 C -3,-43 -3,-40 -1,-38 z" stroke-miterlimit="10" transform="rotate(30)"/>
 </defs>
-<rect x="-120" y="-80" fill="#fff"/>
+<rect x="-120" y="-80" width="240" height="160" fill="#fff"/>
 <rect x="-120" y="-80" width="240" height="48"/>
 <rect x="-120" y="32" width="240" height="48" fill="#060"/>
 <g id="spear">

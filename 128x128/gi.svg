@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
-<rect fill="#da000c"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 256">
+<rect fill="#da000c" width="512" height="256"/>
 <rect fill="#fff" width="512" height="171.5"/>
 <g stroke="#000">
 <g id="castle_half" fill="#da000c" stroke-linecap="square">

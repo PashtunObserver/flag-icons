@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 -40 120 80">
 <g fill="#E70013">
-<rect x="-60" y="-40"/>
+<rect x="-60" y="-40" width="120" height="80"/>
 <circle fill="#FFF" r="20"/>
 <circle r="15"/>
 <circle fill="#FFF" cx="4" r="12"/>
