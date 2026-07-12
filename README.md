@@ -348,11 +348,11 @@ def country_detail(request, country_code):
 
 <div align="center">
 
-| Format | Extension | Best For | Scalable |
-|:---|:---|:---|:---:|
-| **PNG** | `.png` | Web, transparency, universal support | ❌ |
-| **JPG** | `.jpg` | Smaller file size, photos | ❌ |
-| **SVG** | `.svg` | Infinite scaling, crisp at any size | ✅ |
+| Format | Extension |
+|:---|:---|
+| **PNG** | `.png` | 
+| **JPG** | `.jpg` | 
+| **SVG** | `.svg` | 
 
 </div>
 
