@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flag Icons Gallery | PashtunObserver</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent: #f59e0b;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    /* ===== VIBRANT WORLD-FLAG PALETTE ===== */
+    --c-indigo: #4f46e5;
+    --c-violet: #7c3aed;
+    --c-fuchsia: #db2777;
+    --c-rose: #f43f5e;
+    --c-amber: #f59e0b;
+    --c-emerald: #10b981;
+    --c-sky: #0ea5e9;
+    --c-teal: #14b8a6;
+    --gradient-rainbow: linear-gradient(90deg, var(--c-sky), var(--c-indigo), var(--c-violet), var(--c-fuchsia), var(--c-rose), var(--c-amber));
+    --gradient-brand: linear-gradient(135deg, var(--c-indigo) 0%, var(--c-violet) 50%, var(--c-fuchsia) 100%);
+    --gradient-warm: linear-gradient(135deg, var(--c-amber) 0%, var(--c-rose) 100%);
+    --gradient-cool: linear-gradient(135deg, var(--c-sky) 0%, var(--c-teal) 100%);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  h1, h3, .font-display { font-family: 'Outfit', 'Inter', sans-serif; }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+  .animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+  .animate-slide-down { animation: slideDown 0.5s ease-out forwards; }
+  .animate-scale-in { animation: scaleIn 0.3s ease-out forwards; }
+
+  .delay-100 { animation-delay: 0.1s; opacity: 0; }
+  .delay-200 { animation-delay: 0.2s; opacity: 0; }
+  .delay-300 { animation-delay: 0.3s; opacity: 0; }
+  .delay-400 { animation-delay: 0.4s; opacity: 0; }
+
+  @keyframes blobMove {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -20px) scale(1.08); }
+    66% { transform: translate(-20px, 25px) scale(0.94); }
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes rainbowSpin {
+    to { --angle: 360deg; }
+  }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  @keyframes blink {
+    0%, 45% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.85) translateY(12px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  /* ===== MINIMALIST HERO, COLORFUL & ANIMATED ===== */
+  .hero-minimal {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-minimal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(79, 70, 229, 0.07) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 50% 100%, rgba(219, 39, 119, 0.05) 0%, transparent 55%);
+    pointer-events: none;
+  }
+
+  .hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.35;
+    pointer-events: none;
+    animation: blobMove 14s ease-in-out infinite;
+  }
+
+  .hero-blob-1 {
+    width: 260px; height: 260px;
+    top: -60px; left: -40px;
+    background: var(--gradient-cool);
+  }
+
+  .hero-blob-2 {
+    width: 220px; height: 220px;
+    top: 20px; right: -60px;
+    background: var(--gradient-warm);
+    animation-delay: -4s;
+    animation-duration: 17s;
+  }
+
+  .hero-blob-3 {
+    width: 200px; height: 200px;
+    bottom: -80px; left: 40%;
+    background: var(--gradient-brand);
+    animation-delay: -8s;
+    animation-duration: 20s;
+  }
+
+  .hero-emoji-float {
+    position: absolute;
+    font-size: 26px;
+    opacity: 0.5;
+    animation: bob 5s ease-in-out infinite;
+    pointer-events: none;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
+  }
+
+  /* ===== TECH-THEMED HERO AMBIANCE ===== */
+  .hero-tech-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(79, 70, 229, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 70, 229, 0.07) 1px, transparent 1px);
+    background-size: 42px 42px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 0%, transparent 75%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 0%, transparent 75%);
+    animation: gridDrift 18s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes gridDrift {
+    from { background-position: 0 0, 0 0; }
+    to { background-position: 42px 42px, 42px 42px; }
+  }
+
+  .hero-scan-line {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--c-sky), var(--c-violet), transparent);
+    opacity: 0.55;
+    filter: drop-shadow(0 0 6px rgba(99, 102, 241, 0.6));
+    animation: scanDown 5.5s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes scanDown {
+    0% { top: 8%; opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { top: 92%; opacity: 0; }
+  }
+
+  .tech-chip {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'SF Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 11px;
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+    opacity: 0.85;
+    animation: bob 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .tech-chip .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .title-gradient {
+    background: var(--gradient-brand);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 6s ease infinite;
+  }
+
+
+
+  .typed-word {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    animation: popIn 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  /* ===== SEARCH BAR ===== */
+  .search-wrapper {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 16px 46px 16px 52px;
+    border-radius: 14px;
+    border: 2px solid var(--border);
+    background: white;
+    color: var(--text);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .search-input::placeholder { color: #94a3b8; }
+
+  .search-input:focus {
+    border-color: var(--c-indigo);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1), var(--shadow);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--c-indigo);
+    font-size: 18px;
+  }
+
+  .search-clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: #f1f5f9;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-clear-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(-50%) scale(1);
+  }
+
+  .search-clear-btn:hover {
+    background: var(--gradient-warm);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  /* ===== STICKY BAR ===== */
+  .sticky-bar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .sticky-bar::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--gradient-rainbow);
+    background-size: 200% auto;
+    animation: gradientShift 8s linear infinite;
+  }
+
+  .sticky-bar-inner {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+  }
+
+  .sticky-bar-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sticky-bar-divider {
+    flex-shrink: 0;
+    width: 1px;
+    align-self: stretch;
+    background: var(--border);
+    margin: 0 2px;
+  }
+
+  .sticky-fade-edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 28px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .sticky-fade-left {
+    left: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.95), transparent);
+  }
+
+  .sticky-fade-right {
+    right: 0;
+    background: linear-gradient(270deg, rgba(255,255,255,0.95), transparent);
+  }
+
+  .sticky-group-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* ===== FILTER BUTTONS ===== */
+  .filter-btn {
+    padding: 9px 18px;
+    border-radius: 10px;
+    border: 1.5px solid var(--border);
+    background: white;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    min-height: 40px;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--c-indigo);
+    color: var(--c-indigo);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+  }
+
+  .filter-btn.active {
+    background: var(--gradient-brand);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+  }
+
+  #sizeFilterGroup .filter-btn.active { background: var(--gradient-cool); box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35); }
+  #formatFilterGroup .filter-btn.active { background: var(--gradient-warm); box-shadow: 0 4px 14px rgba(244, 63, 94, 0.35); }
+
+  @media (max-width: 640px) {
+    .filter-btn { padding: 8px 13px; font-size: 12px; gap: 4px; min-height: 36px; }
+    .sticky-group-label { font-size: 9.5px; letter-spacing: 1px; }
+  }
+
+  /* ===== FLAG CARDS ===== */
+  .flag-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .flag-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gradient-rainbow);
+    background-size: 200% auto;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+  }
+
+  .flag-card:hover::before {
+    transform: scaleX(1);
+    animation: gradientShift 3s linear infinite;
+  }
+
+  .flag-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(124, 58, 237, 0.25);
+  }
+
+  .flag-card:hover .flag-img {
+    transform: scale(1.08);
+  }
+
+  .flag-card:hover .card-overlay {
+    opacity: 1;
+  }
+
+  .flag-card:hover .card-actions {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .flag-img-wrapper {
+    position: relative;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flag-img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  }
+
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card-actions {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 8px;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .action-btn:hover {
+    background: var(--gradient-brand);
+    color: white;
+    transform: scale(1.1);
+  }
+
+  .card-info {
+    padding: 14px 16px;
+  }
+
+  .card-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6px;
+  }
+
+  .card-code {
+    font-family: 'SF Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--bg);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  .card-size {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  /* ===== MODAL — MINIMALIST DOWNLOAD POPUP ===== */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .modal-backdrop.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-box {
+    background: white;
+    border-radius: 26px;
+    max-width: 420px;
+    width: 100%;
+    max-height: min(92vh, 92dvh);
+    overflow-y: auto;
+    box-shadow: 0 25px 60px -12px rgba(15, 23, 42, 0.35);
+    transform: scale(0.92) translateY(16px);
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  .modal-backdrop.open .modal-box {
+    transform: scale(1) translateY(0);
+  }
+
+  .modal-header {
+    position: relative;
+    padding: 28px 28px 0;
+    text-align: center;
+    background: linear-gradient(180deg, #f8f7ff 0%, #ffffff 100%);
+    border-radius: 26px 26px 0 0;
+  }
+
+  .modal-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    border-radius: 26px 26px 0 0;
+    background: var(--gradient-rainbow);
+    background-size: 200% auto;
+    animation: gradientShift 6s linear infinite;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 15px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .modal-close:hover {
+    background: var(--gradient-warm);
+    color: white;
+    transform: rotate(90deg);
+  }
+
+  .modal-flag-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .modal-flag {
+    width: 108px;
+    height: 108px;
+    object-fit: contain;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    padding: 14px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .modal-size-badge {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-brand);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+    white-space: nowrap;
+  }
+
+  .modal-body {
+    padding: 18px 28px 28px;
+  }
+
+  .modal-title {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    text-align: center;
+    margin-top: 14px;
+  }
+
+  .modal-code {
+    text-align: center;
+    font-family: 'SF Mono', monospace;
+    color: var(--c-indigo);
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+
+  /* ===== MODAL SELECTORS ===== */
+  .selector-group {
+    margin-bottom: 20px;
+  }
+
+  .selector-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .selector-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .selector-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .selector-btn {
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    background: white;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-muted);
+  }
+
+  .selector-btn:hover {
+    border-color: var(--c-indigo);
+    color: var(--c-indigo);
+  }
+
+  .selector-btn.active {
+    background: var(--gradient-brand);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+  }
+
+  /* ===== URL BOX ===== */
+  .url-box {
+    background: linear-gradient(135deg, #f8f7ff 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1.5px solid var(--border);
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .url-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .url-code {
+    font-family: 'SF Mono', monospace;
+    font-size: 12px;
+    color: var(--primary);
+    word-break: break-all;
+    line-height: 1.5;
+  }
+
+  /* ===== ACTION BUTTONS ===== */
+  .btn {
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background: var(--gradient-brand);
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    background-position: right center;
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+  }
+
+  .btn-secondary {
+    background: var(--gradient-cool);
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+    background-position: right center;
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+  }
+
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--gradient-cool);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 10px 40px rgba(16, 185, 129, 0.3);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 640px) {
+    .selector-grid { grid-template-columns: repeat(2, 1fr); }
+    .modal-backdrop { padding: 0; align-items: flex-end; }
+    .modal-box {
+      border-radius: 24px 24px 0 0;
+      max-width: 100%;
+      max-height: 88dvh;
+      transform: translateY(100%);
+    }
+    .modal-backdrop.open .modal-box { transform: translateY(0); }
+    .modal-header { padding: 20px 20px 0; border-radius: 24px 24px 0 0; }
+    .modal-header::before { border-radius: 24px 24px 0 0; }
+    .modal-body { padding: 16px 20px calc(20px + env(safe-area-inset-bottom, 0px)); }
+    .modal-flag { width: 92px; height: 92px; }
+    .modal-title { font-size: 19px; }
+
+    .sticky-bar-inner { padding-top: 10px; padding-bottom: 10px; gap: 4px; }
+    .filter-btn { padding: 6px 10px; font-size: 12px; }
+  }
+
+  @media (max-width: 400px) {
+    .selector-grid-3 { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .selector-btn { padding: 8px 4px; font-size: 12px; }
+  }
+
+  /* ===== GRID ===== */
+  .flag-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  @media (min-width: 1280px) {
+    .flag-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  }
+
+  @media (max-width: 640px) {
+    .flag-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  }
+
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid var(--border);
+  }
+
+  /* Loader */
+  .loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 40px auto;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Hide scrollbar for filter buttons */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body>
+
+<!-- ===== MINIMALIST HERO (FULL WIDTH, LIGHT MODE) ===== -->
+<header class="hero-minimal">
+  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+  <div class="hero-tech-grid" aria-hidden="true"></div>
+  <div class="hero-scan-line" aria-hidden="true"></div>
+
+  <span class="tech-chip hidden sm:inline-flex" style="top:16%; left:6%;" aria-hidden="true">
+    <span class="dot" style="background: var(--c-indigo);"></span>JPG
+  </span>
+  <span class="tech-chip hidden sm:inline-flex" style="top:62%; right:7%; animation-delay:-2s;" aria-hidden="true">
+    <i class="fa-solid fa-code" style="color: var(--c-fuchsia);"></i> &lt;svg/&gt;
+  </span>
+  <span class="tech-chip hidden md:inline-flex" style="top:10%; right:14%; animation-delay:-3.5s;" aria-hidden="true">
+    <span class="dot" style="background: var(--c-amber);"></span>PNG · 64px
+  </span>
+  <span class="tech-chip hidden md:inline-flex" style="bottom:10%; left:12%; animation-delay:-1.2s;" aria-hidden="true">
+    <i class="fa-solid fa-bolt" style="color: var(--c-emerald);"></i> CDN
+  </span>
+  <span class="tech-chip hidden lg:inline-flex" style="bottom:16%; right:22%; animation-delay:-4.2s;" aria-hidden="true">
+    <span class="dot" style="background: var(--c-sky);"></span>   API_READY
+  </span>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-4 md:py-4 text-center">
+
+    <!-- Title -->
+    <h1 class="animate-fade-in-up text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-4 text-slate-900">
+      <i class="fa-solid fa-earth-americas text-blue-500 mr-3"></i><span class="title-gradient">Flag Icons</span>
+    </h1>
+
+
+
+    <!-- Search -->
+    <div class="animate-fade-in-up delay-200 search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input id="searchInput" type="text" placeholder="Search country or code (e.g. Afghanistan, AF, US...)" class="search-input">
+      <button id="searchClearBtn" type="button" class="search-clear-btn" aria-label="Clear search" title="Clear search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+
+</header>
+
+<!-- ===== STICKY CONTROLS ===== -->
+<div class="sticky-bar">
+  <div class="sticky-bar-inner max-w-7xl mx-auto px-3 sm:px-4">
+    <div class="sticky-fade-edge sticky-fade-left"></div>
+    <div class="sticky-fade-edge sticky-fade-right"></div>
+    <div class="sticky-bar-row scrollbar-hide">
+      <!-- Size Filter -->
+      <span class="sticky-group-label">
+        <i class="fa-solid fa-expand"></i><span class="hidden sm:inline">Size</span>
+      </span>
+      <div id="sizeFilterGroup" class="flex gap-2 flex-nowrap">
+        <button data-size="16" class="filter-btn">16px</button>
+        <button data-size="32" class="filter-btn">32px</button>
+        <button data-size="64" class="filter-btn active">64px</button>
+        <button data-size="128" class="filter-btn">128px</button>
+      </div>
+
+      <span class="sticky-bar-divider"></span>
+
+      <!-- Format Filter -->
+      <span class="sticky-group-label">
+        <i class="fa-solid fa-file"></i><span class="hidden sm:inline">Format</span>
+      </span>
+      <div id="formatFilterGroup" class="flex gap-2 flex-nowrap">
+        <button data-format="png" class="filter-btn active"><i class="fa-solid fa-image"></i> PNG</button>
+        <button data-format="jpg" class="filter-btn"><i class="fa-solid fa-file-image"></i> JPG</button>
+        <button data-format="svg" class="filter-btn"><i class="fa-solid fa-vector-square"></i> SVG</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STATS BAR ===== -->
+<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <span id="countDisplay" class="text-slate-500 text-sm font-semibold flex items-center gap-2">
+    <i class="fa-solid fa-layer-group text-slate-400"></i> Showing all flags
+  </span>
+  <span class="text-slate-400 text-xs hidden sm:inline-flex items-center gap-1.5">
+    <i class="fa-regular fa-hand-pointer"></i> Click any flag to download
+  </span>
+</div>
+
+<!-- ===== FLAG GRID ===== -->
+<main class="max-w-7xl mx-auto px-4 pb-24">
+  <div id="flagGrid" class="flag-grid">
+    <!-- Flags injected by JS -->
+  </div>
+</main>
+
+<!-- ===== MODAL ===== -->
+<div id="modal" class="modal-backdrop">
+  <div class="modal-box">
+    <div class="modal-header">
+      <button id="closeModal" class="modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-flag-wrapper">
+        <img id="modalFlag" src="" alt="" class="modal-flag">
+        <div class="modal-size-badge" id="modalSizeBadge">64×64</div>
+      </div>
+
+      <h3 id="modalName" class="modal-title"></h3>
+      <p id="modalCode" class="modal-code"></p>
+    </div>
+
+    <div class="modal-body">
+      <!-- Size Selector -->
+      <div class="selector-group">
+        <label class="selector-label"><i class="fa-solid fa-expand mr-1.5"></i>Select Size</label>
+        <div class="selector-grid">
+          <button data-msize="16" class="selector-btn">16×16</button>
+          <button data-msize="32" class="selector-btn">32×32</button>
+          <button data-msize="64" class="selector-btn active">64×64</button>
+          <button data-msize="128" class="selector-btn">128×128</button>
+        </div>
+      </div>
+
+      <!-- Format Selector -->
+      <div class="selector-group">
+        <label class="selector-label"><i class="fa-solid fa-file mr-1.5"></i>Select Format</label>
+        <div class="selector-grid selector-grid-3">
+          <button data-mformat="png" class="selector-btn active"><i class="fa-solid fa-image mr-1"></i>PNG</button>
+          <button data-mformat="jpg" class="selector-btn"><i class="fa-solid fa-file-image mr-1"></i>JPG</button>
+          <button data-mformat="svg" class="selector-btn"><i class="fa-solid fa-vector-square mr-1"></i>SVG</button>
+        </div>
+      </div>
+
+      <!-- URL Display -->
+      <div class="url-box">
+        <div class="url-label"><i class="fa-solid fa-link"></i> CDN URL</div>
+        <code id="modalUrl" class="url-code"></code>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex gap-3">
+        <button id="copyBtn" class="btn btn-primary flex-1">
+          <i class="fa-regular fa-copy"></i> Copy Link
+        </button>
+        <button id="downloadBtn" class="btn btn-secondary flex-1">
+          <i class="fa-solid fa-download"></i> Download
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div id="toast" class="toast">
+  <i class="fa-solid fa-circle-check text-lg"></i>
+  <span id="toastMsg">Copied to clipboard!</span>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer py-12 text-center">
+  <div class="max-w-2xl mx-auto px-6">
+    <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md" style="background: var(--gradient-brand);">
+      <i class="fa-solid fa-earth-americas text-white text-lg"></i>
+    </div>
+    <p class="text-slate-400 text-sm mb-1">Built with <i class="fa-solid fa-heart text-red-400 mx-1 text-xs"></i> for developers worldwide</p>
+    <a href="https://www.pashtomedium.com/p/rashid-ahmad.html" target="_blank" class="inline-flex items-center gap-2 text-slate-700 hover:text-blue-600 transition-colors font-bold text-lg mt-2 group">
+      <span class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-blue-50 transition-colors">
+        <i class="fa-solid fa-user text-xs text-slate-500"></i>
+      </span>
+      Rashid Ahmad SST IT
+    </a>
+    <p class="text-slate-400 text-xs mt-1 font-medium">Gold Medalist · BS Computer Science · University of Swat</p>
+    <div class="flex justify-center gap-4 mt-4">
+      <a href="https://github.com/PashtunObserver" target="_blank" class="text-slate-400 hover:text-slate-700 transition-colors text-sm flex items-center gap-1.5 hover:scale-110 transform">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <span class="text-slate-300">·</span>
+      <span class="text-slate-400 text-sm flex items-center gap-1.5">
+        <i class="fa-solid fa-code-branch text-xs"></i> Open Source
+      </span>
+    </div>
+    <p class="text-slate-300 text-xs mt-6">© 2026 PashtunObserver. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const countries = {
+  "AD": "Andorra", "AE": "United Arab Emirates", "AF": "Afghanistan", "AG": "Antigua and Barbuda",
+  "AI": "Anguilla", "AL": "Albania", "AM": "Armenia", "AO": "Angola", "AQ": "Antarctica",
+  "AR": "Argentina", "AS": "American Samoa", "AT": "Austria", "AU": "Australia", "AW": "Aruba",
+  "AX": "Åland Islands", "AZ": "Azerbaijan", "BA": "Bosnia and Herzegovina", "BB": "Barbados",
+  "BD": "Bangladesh", "BE": "Belgium", "BF": "Burkina Faso", "BG": "Bulgaria", "BH": "Bahrain",
+  "BI": "Burundi", "BJ": "Benin", "BL": "Saint Barthélemy", "BM": "Bermuda", "BN": "Brunei Darussalam",
+  "BO": "Bolivia", "BQ": "Caribbean Netherlands", "BR": "Brazil", "BS": "Bahamas", "BT": "Bhutan",
+  "BV": "Bouvet Island", "BW": "Botswana", "BY": "Belarus", "BZ": "Belize", "CA": "Canada",
+  "CC": "Cocos Islands", "CD": "DR Congo", "CF": "Central African Republic", "CG": "Congo",
+  "CH": "Switzerland", "CI": "Côte d'Ivoire", "CK": "Cook Islands", "CL": "Chile", "CM": "Cameroon",
+  "CN": "China", "CO": "Colombia", "CR": "Costa Rica", "CU": "Cuba", "CV": "Cape Verde",
+  "CW": "Curaçao", "CX": "Christmas Island", "CY": "Cyprus", "CZ": "Czech Republic", "DE": "Germany",
+  "DJ": "Djibouti", "DK": "Denmark", "DM": "Dominica", "DO": "Dominican Republic", "DZ": "Algeria",
+  "EC": "Ecuador", "EE": "Estonia", "EG": "Egypt", "EH": "Western Sahara", "ER": "Eritrea",
+  "ES": "Spain", "ET": "Ethiopia", "EU": "Europe", "FI": "Finland", "FJ": "Fiji",
+  "FK": "Falkland Islands", "FM": "Micronesia", "FO": "Faroe Islands", "FR": "France", "GA": "Gabon",
+  "GB-ENG": "England", "GB-NIR": "Northern Ireland", "GB-SCT": "Scotland", "GB-WLS": "Wales",
+  "GB": "United Kingdom", "GD": "Grenada", "GE": "Georgia", "GF": "French Guiana", "GG": "Guernsey",
+  "GH": "Ghana", "GI": "Gibraltar", "GL": "Greenland", "GM": "Gambia", "GN": "Guinea",
+  "GP": "Guadeloupe", "GQ": "Equatorial Guinea", "GR": "Greece", "GS": "South Georgia", "GT": "Guatemala",
+  "GU": "Guam", "GW": "Guinea-Bissau", "GY": "Guyana", "HK": "Hong Kong", "HM": "Heard Island",
+  "HN": "Honduras", "HR": "Croatia", "HT": "Haiti", "HU": "Hungary", "ID": "Indonesia",
+  "IE": "Ireland", "IL": "Israel", "IM": "Isle of Man", "IN": "India", "IO": "British Indian Ocean",
+  "IQ": "Iraq", "IR": "Iran", "IS": "Iceland", "IT": "Italy", "JE": "Jersey",
+  "JM": "Jamaica", "JO": "Jordan", "JP": "Japan", "KE": "Kenya", "KG": "Kyrgyzstan",
+  "KH": "Cambodia", "KI": "Kiribati", "KM": "Comoros", "KN": "Saint Kitts", "KP": "North Korea",
+  "KR": "South Korea", "KW": "Kuwait", "KY": "Cayman Islands", "KZ": "Kazakhstan", "LA": "Laos",
+  "LB": "Lebanon", "LC": "Saint Lucia", "LI": "Liechtenstein", "LK": "Sri Lanka", "LR": "Liberia",
+  "LS": "Lesotho", "LT": "Lithuania", "LU": "Luxembourg", "LV": "Latvia", "LY": "Libya",
+  "MA": "Morocco", "MC": "Monaco", "MD": "Moldova", "ME": "Montenegro", "MF": "Saint Martin",
+  "MG": "Madagascar", "MH": "Marshall Islands", "MK": "North Macedonia", "ML": "Mali", "MM": "Myanmar",
+  "MN": "Mongolia", "MO": "Macao", "MP": "Northern Mariana", "MQ": "Martinique", "MR": "Mauritania",
+  "MS": "Montserrat", "MT": "Malta", "MU": "Mauritius", "MV": "Maldives", "MW": "Malawi",
+  "MX": "Mexico", "MY": "Malaysia", "MZ": "Mozambique", "NA": "Namibia", "NC": "New Caledonia",
+  "NE": "Niger", "NF": "Norfolk Island", "NG": "Nigeria", "NI": "Nicaragua", "NL": "Netherlands",
+  "NO": "Norway", "NP": "Nepal", "NR": "Nauru", "NU": "Niue", "NZ": "New Zealand",
+  "OM": "Oman", "PA": "Panama", "PE": "Peru", "PF": "French Polynesia", "PG": "Papua New Guinea",
+  "PH": "Philippines", "PK": "Pakistan", "PL": "Poland", "PM": "Saint Pierre", "PN": "Pitcairn",
+  "PR": "Puerto Rico", "PS": "Palestine", "PT": "Portugal", "PW": "Palau", "PY": "Paraguay",
+  "QA": "Qatar", "RE": "Réunion", "RO": "Romania", "RS": "Serbia", "RU": "Russia",
+  "RW": "Rwanda", "SA": "Saudi Arabia", "SB": "Solomon Islands", "SC": "Seychelles", "SD": "Sudan",
+  "SE": "Sweden", "SG": "Singapore", "SH": "Saint Helena", "SI": "Slovenia", "SJ": "Svalbard",
+  "SK": "Slovakia", "SL": "Sierra Leone", "SM": "San Marino", "SN": "Senegal", "SO": "Somalia",
+  "SR": "Suriname", "SS": "South Sudan", "ST": "São Tomé", "SV": "El Salvador", "SX": "Sint Maarten",
+  "SY": "Syria", "SZ": "Eswatini", "TC": "Turks and Caicos", "TD": "Chad", "TF": "French Southern Territories",
+  "TG": "Togo", "TH": "Thailand", "TJ": "Tajikistan", "TK": "Tokelau", "TL": "Timor-Leste",
+  "TM": "Turkmenistan", "TN": "Tunisia", "TO": "Tonga", "TR": "Türkiye", "TT": "Trinidad",
+  "TV": "Tuvalu", "TW": "Taiwan", "TZ": "Tanzania", "UA": "Ukraine", "UG": "Uganda",
+  "UM": "US Minor Outlying", "US": "United States", "UY": "Uruguay", "UZ": "Uzbekistan",
+  "VA": "Vatican City", "VC": "Saint Vincent", "VE": "Venezuela", "VG": "British Virgin Islands",
+  "VI": "US Virgin Islands", "VN": "Vietnam", "VU": "Vanuatu", "WF": "Wallis and Futuna",
+  "WS": "Samoa", "XK": "Kosovo", "YE": "Yemen", "YT": "Mayotte", "ZA": "South Africa",
+  "ZM": "Zambia", "ZW": "Zimbabwe"
+};
+
+let currentSize = 64;
+let currentFormat = 'png';
+let modalSize = 64;
+let modalFormat = 'png';
+let currentModalCode = '';
+
+const REPO = 'PashtunObserver/flag-icons';
+const BRANCH = 'main';
+
+function getFlagUrl(code, size, format) {
+  return `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}/${size}x${size}/${code.toLowerCase()}.${format}`;
+}
+
+function renderFlags(filter = '') {
+  const grid = document.getElementById('flagGrid');
+  const entries = Object.entries(countries);
+  const filtered = filter
+    ? entries.filter(([code, name]) =>
+        code.toLowerCase().includes(filter.toLowerCase()) ||
+        name.toLowerCase().includes(filter.toLowerCase())
+      )
+    : entries;
+
+  document.getElementById('countDisplay').innerHTML = `
+    <i class="fa-solid fa-layer-group text-slate-400"></i> Showing <strong class="text-slate-700">${filtered.length}</strong> of <strong class="text-slate-700">${entries.length}</strong> flags
+  `;
+
+  grid.innerHTML = filtered.map(([code, name], index) => {
+    const url = getFlagUrl(code, currentSize, currentFormat);
+    const delay = Math.min(index * 30, 500);
+    return `
+      <div class="flag-card animate-fade-in" style="animation-delay: ${delay}ms; opacity: 0;" onclick="openModal('${code}', '${name.replace(/'/g, "\'")}')">
+        <div class="flag-img-wrapper">
+          <img src="${url}" alt="${name}" class="flag-img" loading="lazy" 
+            onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center text-slate-400\'><span class=\'text-3xl font-bold\'>${code}</span><span class=\'text-[10px] mt-1\'>Flag</span></div>'">
+          <div class="card-overlay"></div>
+          <div class="card-actions">
+            <button class="action-btn" title="Copy Link" onclick="event.stopPropagation(); quickCopy('${code}')">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+            <button class="action-btn" title="Download" onclick="event.stopPropagation(); quickDownload('${code}', '${name.replace(/'/g, "\'")}')">
+              <i class="fa-solid fa-download"></i>
+            </button>
+          </div>
+        </div>
+        <div class="card-info">
+          <p class="card-name">${name}</p>
+          <div class="card-meta">
+            <span class="card-code">${code}</span>
+            <span class="card-size">${currentSize}px · ${currentFormat.toUpperCase()}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function openModal(code, name) {
+  currentModalCode = code;
+  modalSize = currentSize;
+  modalFormat = currentFormat;
+  updateModal();
+  document.getElementById('modalName').textContent = name;
+  document.getElementById('modalCode').textContent = code;
+
+  const modal = document.getElementById('modal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function updateModal() {
+  const url = getFlagUrl(currentModalCode, modalSize, modalFormat);
+  document.getElementById('modalFlag').src = url;
+  document.getElementById('modalUrl').textContent = url;
+  document.getElementById('modalSizeBadge').textContent = `${modalSize}×${modalSize}`;
+
+  // FIXED: Use .selector-btn instead of .msize-btn
+  document.querySelectorAll('.selector-btn[data-msize]').forEach(btn => {
+    const s = parseInt(btn.dataset.msize);
+    if (s === modalSize) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  // FIXED: Use .selector-btn instead of .mformat-btn
+  document.querySelectorAll('.selector-btn[data-mformat]').forEach(btn => {
+    const f = btn.dataset.mformat;
+    if (f === modalFormat) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+}
+
+async function downloadImage(url, filename) {
+  try {
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const blobUrl = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(blobUrl);
+    showToast('Download started!');
+  } catch (err) {
+    window.open(url, '_blank');
+    showToast('Opening in new tab...');
+  }
+}
+
+function quickDownload(code, name) {
+  const url = getFlagUrl(code, currentSize, currentFormat);
+  const filename = `${name.replace(/[^a-zA-Z0-9]/g, '_')}_${code}_${currentSize}px.${currentFormat}`;
+  downloadImage(url, filename);
+}
+
+function quickCopy(code) {
+  const url = getFlagUrl(code, currentSize, currentFormat);
+  copyToClipboard(url);
+}
+
+function copyToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => showToast('Link copied to clipboard!'));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    showToast('Link copied to clipboard!');
+  }
+}
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// Event Listeners
+document.getElementById('searchInput').addEventListener('input', e => renderFlags(e.target.value));
+
+// FIXED: Use .filter-btn class which matches the HTML
+document.querySelectorAll('.filter-btn[data-size]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentSize = parseInt(btn.dataset.size);
+    document.querySelectorAll('.filter-btn[data-size]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderFlags(document.getElementById('searchInput').value);
+  });
+});
+
+document.querySelectorAll('.filter-btn[data-format]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentFormat = btn.dataset.format;
+    document.querySelectorAll('.filter-btn[data-format]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderFlags(document.getElementById('searchInput').value);
+  });
+});
+
+document.getElementById('modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal')) closeModal();
+});
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+
+// FIXED: Use .selector-btn with data-msize attribute
+document.querySelectorAll('.selector-btn[data-msize]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    modalSize = parseInt(btn.dataset.msize);
+    updateModal();
+  });
+});
+
+// FIXED: Use .selector-btn with data-mformat attribute
+document.querySelectorAll('.selector-btn[data-mformat]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    modalFormat = btn.dataset.mformat;
+    updateModal();
+  });
+});
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+  const url = document.getElementById('modalUrl').textContent;
+  copyToClipboard(url);
+});
+
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  const url = getFlagUrl(currentModalCode, modalSize, modalFormat);
+  const name = document.getElementById('modalName').textContent;
+  const filename = `${name.replace(/[^a-zA-Z0-9]/g, '_')}_${currentModalCode}_${modalSize}px.${modalFormat}`;
+  downloadImage(url, filename);
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Init
+renderFlags();
+</script>
+
+<!-- ===== ADDITIONAL ENHANCEMENTS (typing animation + search clear button) ===== -->
+<!-- This script only adds new behavior; it does not modify any existing function or logic above. -->
+<script>
+
+  // ---- Clear (x) button for the search input ----
+  function initSearchClear() {
+    var input = document.getElementById('searchInput');
+    var clearBtn = document.getElementById('searchClearBtn');
+    if (!input || !clearBtn) return;
+
+    function toggleClearVisibility() {
+      if (input.value.length > 0) {
+        clearBtn.classList.add('visible');
+      } else {
+        clearBtn.classList.remove('visible');
+      }
+    }
+
+    // Reflect current value (in case of browser autofill/back-forward cache)
+    toggleClearVisibility();
+
+    // Keep the clear button in sync with typing, without altering the
+    // existing 'input' listener already attached elsewhere in this file.
+    input.addEventListener('input', toggleClearVisibility);
+
+    clearBtn.addEventListener('click', function () {
+      input.value = '';
+      // Dispatch a real 'input' event so the existing search/filter
+      // listener (renderFlags) picks up the change exactly as if the
+      // user had cleared the field themselves.
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      toggleClearVisibility();
+      input.focus();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () {
+      initHeroTyping();
+      initSearchClear();
+    });
+  } else {
+    initHeroTyping();
+    initSearchClear();
+  }
+})();
+</script>
+</body>
+</html>
